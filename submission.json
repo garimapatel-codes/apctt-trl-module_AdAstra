@@ -1,0 +1,21 @@
+{
+  "submission_version": "apctt-submission-v3",
+  "team": "Ad_Astra",
+  "package_id": "ad-astra-trl-module",
+  "package_version": "1.0.0",
+  "base_id": "apctt-base-9e7fe1324bb6",
+  "declared_package_sha256": "0875c6c382e62ba23d06db6f18dbd5af2493c8eff940d0b9930d3c30f6fcb3be",
+  "license": "MIT",
+  "compute": {
+    "device": "cpu"
+  },
+  "settings": {},
+  "models": [
+    {
+      "catalog_id": "ms-marco-minilm-l6-v2"
+    },
+    {
+      "catalog_id": "deberta-v3-base-zeroshot-v2.0-c"
+    }
+  ]
+}
