@@ -1,0 +1,34 @@
+{
+  "_note": "Holdout key v2 (unseen reports), same rules as the main key v4. Written by reading the reports, without using our search.",
+  "USGS-SDG-099": {
+    "APCTT-C01": {"pages": [7], "quote": "Sediment thickness was calculated as the difference between the seafloor and bLGM travel times."},
+    "APCTT-C02": {"pages": [6], "quote": "We describe the derivation of these two map layers and the calculation of footprint area, thickness, and volume of the deposits"},
+    "APCTT-C03": {"pages": [9, 10], "quote": "has a mean value of 15 m and a maximum thickness of 57 m"},
+    "APCTT-C05": {"pages": [9, 8], "quote": "with a standard deviation of 5 m, an acceptable uncertainty for the depth of the bLGM"},
+    "APCTT-C06": {"pages": [8], "quote": "This interpolation is used in the final maps of shallow subsurface geology and structure"},
+    "APCTT-C10": {"pages": [9], "quote": "an acceptable uncertainty for the depth of the bLGM"},
+    "APCTT-C11": {"pages": [7], "quote": "Single-channel seismic-reflection profiles from surveys Z-3-07-SC and S-7-08-SC conducted by the U.S. Geological Survey in 2007 and 2008"},
+    "APCTT-C12": {"pages": [6], "quote": "is a series of thematic maps covering the offshore area between Refugio and Hueneme Canyon, California"}
+  },
+  "USGS-SDG-033": {
+    "APCTT-C01": {"pages": [16], "quote": "HEC–RAS is a one-dimensional step-backwater model used to compute water-surface profiles"},
+    "APCTT-C02": {"pages": [13, 11], "quote": "Flood-warning systems typically involve major elements including streamflow, lake-level and precipitation networks"},
+    "APCTT-C03": {"pages": [17], "quote": "matched each rating curve within 0.06 foot (0.02 m)"},
+    "APCTT-C05": {"pages": [17, 16], "quote": "Each model was calibrated to the available rating curves (pre-existing streamgages) or streamflow measurements (new streamgages)"},
+    "APCTT-C06": {"pages": [18, 11], "quote": "Flood-inundation areal boundaries were initially mapped with HEC–GeoRAS software"},
+    "APCTT-C07": {"pages": [11, 15, 22], "quote": "The maps were provided to the National Weather Service (NWS) for incorporation into a Web-based flood-warning system"},
+    "APCTT-C11": {"pages": [22, 17], "quote": "Calibration of the unsteady-flow model was limited to four well-documented flood events"},
+    "APCTT-C12": {"pages": [13, 11], "quote": "This report describes methods and results of hydrologic and hydraulic analyses of selected streams within Licking County, Ohio"}
+  },
+  "USGS-SDG-013": {
+    "APCTT-C01": {"pages": [9, 14], "quote": "The concept of using a periodic solution to a conceptual storage equation with pulse input function to model seasonality in pesticide concentrations in stream water was first introduced by Vecchia and others (2008)."},
+    "APCTT-C02": {"pages": [10, 9], "quote": "The main purpose of this package is to fit the"},
+    "APCTT-C03": {"pages": [18, 19], "quote": "The seawaveQ R package was used to model trends for two pesticide-site combinations using eight cases."},
+    "APCTT-C04": {"pages": [10, 15], "quote": "SEAWAVE-Q has been tested and applied to simulated and observed data with changing sampling frequencies and gaps in the data"},
+    "APCTT-C05": {"pages": [9, 18], "quote": "compared several methods for analyzing trends in pesticide concentrations for 31 sites and 11 pesticides in the Corn Belt of the United States"},
+    "APCTT-C06": {"pages": [18], "quote": "hundreds of model comparisons were done for numerous pesticide-site combinations"},
+    "APCTT-C07": {"pages": [9, 21], "quote": "analyzing pesticide trends at sites across the Nation (Oelsner and others, 2017)"},
+    "APCTT-C11": {"pages": [18], "quote": "Data from 1992 to 2012 for each of the sites were used in the model comparisons"},
+    "APCTT-C12": {"pages": [10, 9], "quote": "The new version of seawaveQ documented in this report, 2.0.0, includes an option to model the trend with restricted cubic splines (RCS)"}
+  }
+}

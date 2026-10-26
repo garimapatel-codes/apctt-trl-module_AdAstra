@@ -1,0 +1,76 @@
+{
+  "_note": "Draft by Claude, reviewed by Garima Patel. Pages are 1-based PDF pages. C04-C07 for models/maps read as: C04 lab-like checks, C05 calibrated/validated against site measurements, C06 whole system run for the actual site, C07 delivered/in use or done by field crews on the real network. A criterion not listed for a case has no gold page (insufficient evidence). v3: pages that repeat the same evidence added for 7 entries.",
+  "USGS-SDG-012": {
+    "APCTT-C01": {"pages": [6, 7], "quote": "on a physical law or empirical relation"},
+    "APCTT-C02": {"pages": [6, 9], "quote": "P2S is implemented as loosely coupled software"},
+    "APCTT-C04": {"pages": [9], "quote": "This installation includes libraries, source code, startup scripts, and example datasets."}
+  },
+  "USGS-SDG-040": {
+    "APCTT-C01": {"pages": [9, 13], "quote": "one-dimensional step-backwater hydraulic model"},
+    "APCTT-C02": {"pages": [9, 11], "quote": "produce a library of flood-inundation maps"},
+    "APCTT-C03": {"pages": [15], "quote": "simulated peak elevations was 0.47 ft"},
+    "APCTT-C05": {"pages": [15], "quote": "demonstrate that the model is capable of simulating accurate water levels for the extent of the simulation reach"},
+    "APCTT-C06": {"pages": [15], "quote": "The calibrated hydraulic model was used to generate a total of 411 water-surface profiles"},
+    "APCTT-C07": {"pages": [18, 9], "quote": "presents the current stage at the cooperative USGS stations"},
+    "APCTT-C11": {"pages": [15], "quote": "documented high-water marks surveyed by USGS personnel after the December 2015 flood at 26 locations along the simulation reach"}
+  },
+  "USGS-SDG-061": {
+    "APCTT-C01": {"pages": [13], "quote": "Postfire landscapes have measurable hydrologic changes"},
+    "APCTT-C02": {"pages": [10], "quote": "can accurately represent the effects of fire on watershed-scale hydrologic response"},
+    "APCTT-C03": {"pages": [23, 25], "quote": "Overall, the prefire model was considered to be satisfactory"},
+    "APCTT-C05": {"pages": [23], "quote": "assessed as satisfactory based on statistical measures of R2 (0.74) and NSE (0.62)"},
+    "APCTT-C06": {"pages": [27], "quote": "For the application portion of this study, data from a single precipitation station (Cloudcroft, N. Mex.) were input into the prefire and postfire models"},
+    "APCTT-C10": {"pages": [23, 27], "quote": "both prefire and postfire PRMS models met satisfactory evaluation criteria"},
+    "APCTT-C11": {"pages": [22], "quote": "Calibration of PRMS was conducted only for the May through October period"},
+    "APCTT-C12": {"pages": [21, 22], "quote": "The North Fork Eagle Creek subwatershed was selected for calibration for several reasons"}
+  },
+  "USGS-SDG-005": {
+    "APCTT-C01": {"pages": [13, 9], "quote": "The backscatter magnitude is computed per beam by balancing the active sonar equation"},
+    "APCTT-C02": {"pages": [10], "quote": "will provide insight into the geomorphic framework of the river corridor"},
+    "APCTT-C03": {"pages": [25, 14], "quote": "A 1-m-resolution DEM was constructed for a 15.84-mi"},
+    "APCTT-C04": {"pages": [11], "quote": "ensures that the instrument is able to repeatedly and precisely index a target"},
+    "APCTT-C05": {"pages": [14], "quote": "we compared survey data to the elevation of check points or reference surfaces"},
+    "APCTT-C06": {"pages": [9], "quote": "These data were combined to produce a digital elevation model (DEM), spatially variable estimates of DEM uncertainty, and bed-substrate distribution maps."},
+    "APCTT-C07": {"pages": [11], "quote": "Bathymetric surveys were collected using both multibeam and singlebeam sonar systems deployed on motorized rafts"},
+    "APCTT-C11": {"pages": [11], "quote": "we conducted multibeam sonar surveys during the November 2014 high-flow experiment"}
+  },
+  "USGS-SDG-027": {
+    "APCTT-C02": {"pages": [9, 11, 12], "quote": "goal of obtaining precise elevations referenced to a uniform vertical datum"},
+    "APCTT-C03": {"pages": [24, 17], "quote": "the results were compared as a measure of quality assurance"},
+    "APCTT-C05": {"pages": [17], "quote": "Differences between methods ranged from -0.003 to +0.045 m, with a mean difference of 0.011 m"},
+    "APCTT-C06": {"pages": [15], "quote": "Streamgage datum offsets were applied to surveyed streamgages"},
+    "APCTT-C07": {"pages": [9, 12], "quote": "Three field crews deployed Global Navigation Satellite System receivers statically over 16 reference marks"},
+    "APCTT-C11": {"pages": [24, 14], "quote": "Deployment times for GNSS receivers ranged from 29 to 68 hours"}
+  },
+  "USGS-SDG-028": {
+    "APCTT-C01": {"pages": [9], "quote": "a site needs to show evidence of being in an"},
+    "APCTT-C02": {"pages": [9, 10], "quote": "one can determine the water-surface elevation corresponding to the calculated flow that defines the estimated inundation zone along the river"},
+    "APCTT-C05": {"pages": [9], "quote": "As part of the pilot study, a set of maps representing the estimated potential wetland extents was generated"},
+    "APCTT-C06": {"pages": [18], "quote": "This project demonstrated that a science- and databased strategy can be applied"}
+  },
+  "USGS-SDG-045": {
+    "APCTT-C01": {"pages": [14], "quote": "HEC–RAS is a one-dimensional, stepbackwater model for simulation of water-surface profiles"},
+    "APCTT-C02": {"pages": [9, 10], "quote": "One way to address this problem is to produce a library of flood-inundation maps"},
+    "APCTT-C03": {"pages": [14], "quote": "within 0.5 ft of the maximum measured water-surface elevation for a given streamflow"},
+    "APCTT-C05": {"pages": [14], "quote": "The results demonstrate that the model is capable of simulating accurate water levels for a range of flows in the basin."},
+    "APCTT-C06": {"pages": [16], "quote": "Flood-inundation maps were created for 24 combinations of water-surface elevations at the three USGS streamgages"},
+    "APCTT-C07": {"pages": [16, 10], "quote": "A Flood Inundation Mapping Science website has been established"},
+    "APCTT-C10": {"pages": [14], "quote": "the model results encapsulate the measured data for all conditions mapped"},
+    "APCTT-C11": {"pages": [14], "quote": "The model performance was evaluated using historical streamflow measurements and the most current stagedischarge relations"}
+  },
+  "USGS-SDG-081": {
+    "APCTT-C01": {"pages": [7], "quote": "Tide gates and ditching are known to affect marine estuaries"},
+    "APCTT-C02": {"pages": [7], "quote": "The method can be used to estimate high-tide heights in tidal wetlands drained by tide gates"},
+    "APCTT-C03": {"pages": [7, 15], "quote": "the method accuracy averages about"},
+    "APCTT-C05": {"pages": [15], "quote": "The method was validated by using the calibrated values for diffusivity to estimate tide heights in Leetes Island marsh, Wilson Cove marsh, and Pine Creek marsh"},
+    "APCTT-C06": {"pages": [7, 15], "quote": "A geographic information system application of the method is demonstrated for Sybil Creek marsh"},
+    "APCTT-C11": {"pages": [15], "quote": "for days not used in the calibration and comparing the estimates against observed heights"}
+  },
+  "USGS-SDG-094": {
+    "APCTT-C01": {"pages": [7], "quote": "A Bayesian Network provides a framework to evaluate the probability of a specific response outcome"},
+    "APCTT-C02": {"pages": [6], "quote": "The Bayesian Network converts inputs that include observations of local rates of relative sea-level change"},
+    "APCTT-C03": {"pages": [6, 22], "quote": "the BN predicted correctly 68 percent of the cases where shoreline-change rate observations were available"},
+    "APCTT-C05": {"pages": [22, 24, 6], "quote": "the success rates varied from 34 percent for the Gulf coast to 93 percent for the Pacific coast"},
+    "APCTT-C11": {"pages": [22, 24], "quote": "calculated only for those cases where shoreline-change observations were present in the dataset"}
+  }
+}

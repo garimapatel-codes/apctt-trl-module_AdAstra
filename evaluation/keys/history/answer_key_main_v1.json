@@ -1,0 +1,235 @@
+{
+  "_note": "Draft by Claude, reviewed by Garima (first 3 cases verified by Garima; 6 later cases quotes machine-checked, support not yet reviewed). Pages are 1-based PDF pages. A criterion not listed for a case has no gold page (correct answer: insufficient evidence).",
+  "USGS-SDG-012": {
+    "APCTT-C01": {
+      "pages": [
+        6,
+        7
+      ],
+      "quote": "on a physical law or empirical relation"
+    },
+    "APCTT-C02": {
+      "pages": [
+        6,
+        9
+      ],
+      "quote": "P2S is implemented as loosely coupled software"
+    }
+  },
+  "USGS-SDG-040": {
+    "APCTT-C01": {
+      "pages": [
+        9,
+        13
+      ],
+      "quote": "one-dimensional step-backwater hydraulic model"
+    },
+    "APCTT-C02": {
+      "pages": [
+        9,
+        11
+      ],
+      "quote": "produce a library of flood-inundation maps"
+    },
+    "APCTT-C03": {
+      "pages": [
+        15
+      ],
+      "quote": "simulated peak elevations was 0.47 ft"
+    },
+    "APCTT-C11": {
+      "pages": [
+        15
+      ],
+      "quote": "documented high-water marks surveyed by USGS personnel after the December 2015 flood at 26 locations along the simulation reach"
+    }
+  },
+  "USGS-SDG-061": {
+    "APCTT-C01": {
+      "pages": [
+        13
+      ],
+      "quote": "Postfire landscapes have measurable hydrologic changes"
+    },
+    "APCTT-C02": {
+      "pages": [
+        10
+      ],
+      "quote": "can accurately represent the effects of fire on watershed-scale hydrologic response"
+    },
+    "APCTT-C03": {
+      "pages": [
+        23,
+        25
+      ],
+      "quote": "Overall, the prefire model was considered to be satisfactory"
+    },
+    "APCTT-C10": {
+      "pages": [
+        23,
+        27
+      ],
+      "quote": "both prefire and postfire PRMS models met satisfactory evaluation criteria"
+    },
+    "APCTT-C11": {
+      "pages": [
+        22
+      ],
+      "quote": "Calibration of PRMS was conducted only for the May through October period"
+    },
+    "APCTT-C12": {
+      "pages": [
+        21
+      ],
+      "quote": "The North Fork Eagle Creek subwatershed was selected for calibration for several reasons"
+    }
+  },
+  "USGS-SDG-005": {
+    "APCTT-C01": {
+      "pages": [
+        9
+      ],
+      "quote": "Technological developments over the past two decades"
+    },
+    "APCTT-C02": {
+      "pages": [
+        10
+      ],
+      "quote": "will provide insight into the geomorphic framework of the river corridor"
+    },
+    "APCTT-C03": {
+      "pages": [
+        25
+      ],
+      "quote": "A 1-m-resolution DEM was constructed for a 15.84-mi"
+    },
+    "APCTT-C11": {
+      "pages": [
+        11
+      ],
+      "quote": "we conducted multibeam sonar surveys during the November 2014 high-flow experiment"
+    }
+  },
+  "USGS-SDG-027": {
+    "APCTT-C02": {
+      "pages": [
+        9,
+        11
+      ],
+      "quote": "goal of obtaining precise elevations referenced to a uniform vertical datum"
+    },
+    "APCTT-C03": {
+      "pages": [
+        24
+      ],
+      "quote": "the results were compared as a measure of quality assurance"
+    },
+    "APCTT-C11": {
+      "pages": [
+        24
+      ],
+      "quote": "Deployment times for GNSS receivers ranged from 29 to 68 hours"
+    }
+  },
+  "USGS-SDG-028": {
+    "APCTT-C01": {
+      "pages": [
+        9
+      ],
+      "quote": "a site needs to show evidence of being in an"
+    },
+    "APCTT-C02": {
+      "pages": [
+        9
+      ],
+      "quote": "one can determine the water-surface elevation corresponding to the calculated flow that defines the estimated inundation zone along the river"
+    }
+  },
+  "USGS-SDG-045": {
+    "APCTT-C01": {
+      "pages": [
+        14
+      ],
+      "quote": "HEC-RAS is a one-dimensional, stepbackwater model for simulation of water-surface profiles"
+    },
+    "APCTT-C02": {
+      "pages": [
+        9,
+        10
+      ],
+      "quote": "One way to address this problem is to produce a library of flood-inundation maps"
+    },
+    "APCTT-C03": {
+      "pages": [
+        14
+      ],
+      "quote": "within 0.5 ft of the maximum measured water-surface elevation for a given streamflow"
+    },
+    "APCTT-C10": {
+      "pages": [
+        14
+      ],
+      "quote": "the model results encapsulate the measured data for all conditions mapped"
+    },
+    "APCTT-C11": {
+      "pages": [
+        14
+      ],
+      "quote": "The model performance was evaluated using historical streamflow measurements and the most current stagedischarge relations"
+    }
+  },
+  "USGS-SDG-081": {
+    "APCTT-C01": {
+      "pages": [
+        7
+      ],
+      "quote": "Tide gates and ditching are known to affect marine estuaries"
+    },
+    "APCTT-C02": {
+      "pages": [
+        7
+      ],
+      "quote": "The method can be used to estimate high-tide heights in tidal wetlands drained by tide gates"
+    },
+    "APCTT-C03": {
+      "pages": [
+        7,
+        15
+      ],
+      "quote": "the method accuracy averages about"
+    },
+    "APCTT-C11": {
+      "pages": [
+        15
+      ],
+      "quote": "for days not used in the calibration and comparing the estimates against observed heights"
+    }
+  },
+  "USGS-SDG-094": {
+    "APCTT-C01": {
+      "pages": [
+        7
+      ],
+      "quote": "A Bayesian Network provides a framework to evaluate the probability of a specific response outcome"
+    },
+    "APCTT-C02": {
+      "pages": [
+        6
+      ],
+      "quote": "The Bayesian Network converts inputs that include observations of local rates of relative sea-level change"
+    },
+    "APCTT-C03": {
+      "pages": [
+        6,
+        22
+      ],
+      "quote": "the BN predicted correctly 68 percent of the cases where shoreline-change rate observations were available"
+    },
+    "APCTT-C11": {
+      "pages": [
+        22
+      ],
+      "quote": "calculated only for those cases where shoreline-change observations were present in the dataset"
+    }
+  }
+}

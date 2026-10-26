@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+evaluation/results/
+evaluation/evaluation_quotes.txt
