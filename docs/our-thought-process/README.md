@@ -38,6 +38,7 @@ time.
 | 009 | [Quote quality: what may be quoted as evidence](009-quote-quality.md) | Accepted |
 | 010 | [Version 2: results, timing and robustness](010-version-2-results.md) | Accepted |
 | 011 | [Packaging Submission 1 and checking the zip locally](011-packaging-and-local-check.md) | Accepted |
+| 012 | [A trained TRL model vs our hand-written rule](012-trained-trl-model.md) | Accepted (rule kept); corrects one sentence of 007 |
 
 ## The path in one paragraph
 
@@ -51,7 +52,9 @@ that a heavy NLI judge was slower and worse than starting from the usual pattern
 these reports, so the NLI model now only picks the quote (006). The TRL comes from what
 is being assessed (007). We made our own answer keys consistent before trusting any
 number (008), cleaned up what may be quoted (009), measured the whole module (010), and
-checked the packed zip on the kit's own server before submitting (011).
+checked the packed zip on the kit's own server before submitting (011). After Submission 1 we
+tested a trained TRL model against the rule with mock exams and a sealed lockbox; it did not win,
+so the rule stays (012).
 
 ## Principle
 
