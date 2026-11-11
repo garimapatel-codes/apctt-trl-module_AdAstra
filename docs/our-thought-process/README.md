@@ -39,6 +39,7 @@ time.
 | 010 | [Version 2: results, timing and robustness](010-version-2-results.md) | Accepted |
 | 011 | [Packaging Submission 1 and checking the zip locally](011-packaging-and-local-check.md) | Accepted |
 | 012 | [A trained TRL model vs our hand-written rule](012-trained-trl-model.md) | Accepted (rule kept); corrects one sentence of 007 |
+| 013 | [Smarter TRL rule: "is it really in use?" and "answer the middle when unsure"](013-checking-real-use-and-hedging.md) | Accepted (Submission 2) |
 
 ## The path in one paragraph
 
@@ -54,7 +55,8 @@ is being assessed (007). We made our own answer keys consistent before trusting 
 number (008), cleaned up what may be quoted (009), measured the whole module (010), and
 checked the packed zip on the kit's own server before submitting (011). After Submission 1 we
 tested a trained TRL model against the rule with mock exams and a sealed lockbox; it did not win,
-so the rule stays (012).
+so the rule stays (012). Instead we made the rule itself smarter: each "TRL 7" shortcut now checks
+for real use, and unclear software cases get the middle level; 4 fixes, 0 breaks (013).
 
 ## Principle
 

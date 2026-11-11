@@ -64,6 +64,9 @@ REFERENCE = re.compile(r"^[A-Z][A-Za-z'\-]+, [A-Z]\.(?:[A-Z]\.)*,?\s+(?:and\s|\d
 NOT_DONE = re.compile(r"\b(?:will|would|could|might|should|may)\b|\bfuture (?:work|studies|research|efforts)\b",
                       re.IGNORECASE)                     # not done (yet), hypothetical or advice
 NEGATED = re.compile(r"\b(?:not|cannot|never)\b", re.IGNORECASE)
+NEGATIVE_VERDICT = re.compile(
+    r"\b(?:did not|does not|do not|failed to) (?:meet|satisfy|achieve)\b|\bnot (?:within|satisfactory|acceptable)\b"
+    r"|\bunsatisfactor\w*|\bunacceptab\w*", re.IGNORECASE)
 CITATION = re.compile(r"\(\D{0,80}?(?:and others|et al\.?)[,\s]+\d{4}|\(\D{0,60}?, (?:19|20)\d\d[a-z]?\)|"
                       r"\b[A-Z][a-z]+ (?:and [A-Z][a-z]+|and others|et al\.?) \((?:19|20)\d\d[a-z]?\)")
 QUANTITY = re.compile(r"\d(?:[\d.,]*)\s*(?:percent|%|ft|feet|foot|m\b|meters?|mi\b|miles?|km|cm|mm|in\.|°)|"
@@ -75,6 +78,56 @@ DEFINITION = re.compile(r"\b(?:is|are) (?:the process of|defined as)\b|\brefers?
 TRL_CLAIM = re.compile(r"\bTRL\s*-?\s*\d", re.IGNORECASE)
 NUMBERISH = re.compile(r"[\d.,()\-–−+%=/]+")
 LIMITED = re.compile(r"\blimited validation\b", re.IGNORECASE)
+
+# Group B checks (note 013): a "-> 7" shortcut from the case fields stands only if the report shows the
+# product in REAL use. Otherwise it was demonstrated in the actual environment but is not yet operational -> 6.
+_GAP = r"(?:U\.S\.|[^.]){0,120}"                 # up to 120 characters within the sentence ("U.S." allowed)
+FORECAST_LINK = re.compile(r"National Weather Service|\bNWS\b|\bAHPS\b|Advanced Hydrologic Prediction|forecast", re.IGNORECASE)
+STREAMSTATS_PLANNED = re.compile(
+    r"will be (?:integrated|incorporated|implemented|added|included|made available)\b" + _GAP + r"StreamStats"
+    r"|StreamStats" + _GAP + r"will be (?:integrated|incorporated|implemented|added|included|made available)\b",
+    re.IGNORECASE)
+STREAMSTATS_DONE = re.compile(
+    r"(?:has|have) been (?:integrated|incorporated|implemented|added|included)\b" + _GAP + r"StreamStats"
+    r"|StreamStats" + _GAP + r"(?:was|were|has been|have been) (?:developed|implemented|updated|released)\b"
+    r"|(?:is|are) (?:included|incorporated|available) (?:in|through) " + _GAP + r"StreamStats"
+    r"|StreamStats" + _GAP + r"\bincorporates\b", re.IGNORECASE)
+HINDCAST = re.compile(r"\bhindcast", re.IGNORECASE)
+
+# Group C (note 013): software shown only on example / test data, with no accuracy statistics against
+# real measurements, sits between lab-tested (TRL 4) and demonstrated (TRL 6). Answering the middle
+# level, 5, earns at least half a point whichever it is (hedging).
+SOFTWARE_TARGET = re.compile(r"\bsoftware\b|\bcomputer program\b|\bsource code\b|\bcode\b|\bpackage\b|\btoolbox\b", re.IGNORECASE)
+EXAMPLE_DATA = re.compile(
+    r"\bexample (?:data|data ?sets?|files?|applications?|problems?|simulations?)\b|\btest (?:data ?sets?|problems?|cases?)\b"
+    r"|\bsample (?:data|input) files?\b|\bsource code\b|\binstallation\b", re.IGNORECASE)
+ACCURACY_STATS = re.compile(
+    r"\bRMSE\b|root[- ]mean[- ]square|Nash[- ]Sutcliffe|\bNSE\b|\bR2\b|\bR²|coefficient of determination"
+    r"|percent (?:error|bias|difference)|\bPBIAS\b|mean (?:absolute )?error", re.IGNORECASE)
+
+
+def software_on_examples(case: dict, report_text: str) -> bool:
+    """Group C: is the target software, shown on example/test data, without accuracy statistics?"""
+    target = (case.get("assessment_target") or {}).get("description") or ""
+    return (bool(SOFTWARE_TARGET.search(target))
+            and len(EXAMPLE_DATA.findall(report_text)) >= 2
+            and not ACCURACY_STATS.search(report_text))
+
+
+def operational_check(case: dict, trl: int, reason: str, report_text: str) -> tuple[int, str]:
+    """Group B: demote a case-field '-> 7' to 6 when the report shows no real operational use."""
+    if trl != 7:
+        return trl, reason
+    fields = f"{case.get('title') or ''} {(case.get('assessment_target') or {}).get('description') or ''}".lower()
+    if reason.startswith("a flood-inundation map library") and not FORECAST_LINK.search(report_text):
+        return 6, "flood-inundation maps produced and calibrated, but not linked to official flood forecasts (not yet in operational warning use)"
+    if reason.startswith("released software") and "streamstats" in fields and not re.search(
+            r"\br package\b|user guide|user's guide|web application", fields):
+        if len(STREAMSTATS_PLANNED.findall(report_text)) > len(STREAMSTATS_DONE.findall(report_text)):
+            return 6, "methods documented; their delivery in StreamStats is mainly described as planned"
+    if reason.startswith("a survey or mapping product") and len(HINDCAST.findall(report_text)) >= 3:
+        return 6, "an approach evaluated at actual scale through a hindcast of past events, not yet in operational use"
+    return trl, reason
 
 MISSING = {
     1: "No statement of the scientific or engineering principles behind the technology was found.",
@@ -118,9 +171,13 @@ def decide_trl(case: dict, report_text: str) -> tuple[int, str, bool]:
     """Returns (TRL, reason, decided_from_case_fields)."""
     trl, reason = meta_trl(case)
     if trl is not None:
+        trl, reason = operational_check(case, trl, reason, report_text)
         return trl, reason, True
     if LIMITED.search(report_text):
         return 5, "the report itself describes only a limited validation", False
+    if software_on_examples(case, report_text):
+        return 5, ("software shown on example or test data without accuracy statistics against real "
+                   "measurements: between lab-validated (4) and demonstrated (6)"), False
     return 6, "a model or method calibrated and applied in the actual study area", False
 
 
@@ -135,7 +192,12 @@ def usable(sentence: str, role) -> bool:
         return False
     if JUNK.search(sentence) or REFERENCE.match(sentence) or TRL_CLAIM.search(sentence):
         return False
-    if DEFINITION.search(sentence) or NEGATED.search(sentence):
+    if DEFINITION.search(sentence):
+        return False
+    # A negated sentence is usually poor evidence, except for C10: "the model did not meet the criteria for
+    # satisfactory fit" reports a comparison with a stated criterion and its outcome, which the organizers'
+    # clarification (10 Nov) counts as C10 evidence even when the requirement was not achieved.
+    if NEGATED.search(sentence) and not (role == "requirements" and NEGATIVE_VERDICT.search(sentence)):
         return False
     if role == 2:                                        # intended use may be written as "can/will be used"
         return True
