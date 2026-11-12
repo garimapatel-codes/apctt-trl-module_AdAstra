@@ -5,6 +5,9 @@ evidence we gathered before committing to it. The code shows *what* we built; th
 notes show *how we decided*, so that we (and any reviewer) can follow the reasoning
 and challenge it if the facts change.
 
+For the big picture first, read the one-page [summary](../summary.md) (pipeline diagram and results), then the
+[design document](../design-document.md) (the parts and how one case runs, with diagrams).
+
 ## How to read these notes
 
 Each note is a short decision record with the same sections:
