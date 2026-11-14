@@ -34,7 +34,7 @@ show *where in the report* the proof is. Doing this by hand takes an expert hour
 | Limit | Value |
 |---|---|
 | Time per case, model loading included | 180 s |
-| Hardware | 4 CPU cores, no GPU |
+| Hardware | 4 CPU cores (a GPU is optional; we chose CPU only) |
 | Models | only those in the organizer's read-only model store |
 | Pages that count for a criterion | the first 3 distinct pages cited |
 | Score | 0.45 × TRL score + 0.40 × criteria score + 0.15 × quote score |
@@ -296,10 +296,11 @@ breaks more than it fixes, and keep a sealed **lockbox** that no rule was tuned 
 
 ---
 
-## 10. Known limits and next steps (Stage 2)
+## 10. Known limits and future work
 
 - **Quotes are the weakest part.** About half fully support their criterion. Three cheap fixes were tested and none
-  generalised. The next real step needs a model that reasons about sentences, which needs a GPU.
+  generalised. The next real step needs a model that reasons about sentences, for example a larger catalogue model on the
+  event machine's GPU. The package is frozen after submission (Stage 2 uses it unchanged), so this is future work.
 - **TRL 4, 8 and 9 are rare** in the public cases (1, 1 and 2 reports), so the rule has little evidence for them.
 - **The rule is tuned to this report collection** (U.S. Geological Survey style reports). A very different kind of
   report would mostly fall to the default TRL 6.

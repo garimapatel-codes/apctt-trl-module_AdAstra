@@ -114,7 +114,8 @@ than it fixes.
 ## Known limits and next steps
 
 - **Quotes are the weakest part:** about half fully support their criterion. Cheap fixes did not generalise; the next
-  step is a model that reasons about sentences, which needs a GPU (our Stage 2 plan).
+  step is a model that reasons about sentences (for example a larger model on a GPU). The package is frozen after
+  submission, so this is future work.
 - **TRL 4, 8 and 9 are rare** in the public cases (1, 1 and 2 reports), so the rule has little evidence for them.
 - **Tuned to this report collection** (U.S. Geological Survey style). A very different kind of report would mostly
   fall to the default TRL 6.
