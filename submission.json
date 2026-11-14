@@ -2,9 +2,9 @@
   "submission_version": "apctt-submission-v3",
   "team": "Ad_Astra",
   "package_id": "ad-astra-trl-module",
-  "package_version": "1.0.0",
+  "package_version": "1.1.0",
   "base_id": "apctt-base-9e7fe1324bb6",
-  "declared_package_sha256": "0875c6c382e62ba23d06db6f18dbd5af2493c8eff940d0b9930d3c30f6fcb3be",
+  "declared_package_sha256": "32b069469c4bb71b85d685c8f5e30cc146c50354a83efe09f23a9f049d19e028",
   "license": "MIT",
   "compute": {
     "device": "cpu"

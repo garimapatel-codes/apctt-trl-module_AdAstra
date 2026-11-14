@@ -2,16 +2,16 @@
   "declaration_version": "apctt-declaration-v1",
   "team": "Ad_Astra",
   "package_id": "ad-astra-trl-module",
-  "package_version": "1.0.0",
-  "declared_package_sha256": "0875c6c382e62ba23d06db6f18dbd5af2493c8eff940d0b9930d3c30f6fcb3be",
+  "package_version": "1.1.0",
+  "declared_package_sha256": "32b069469c4bb71b85d685c8f5e30cc146c50354a83efe09f23a9f049d19e028",
   "team_training": "no_team_training",
   "training": null,
   "data_sources": [
     {
       "source": "APCTT public sample cases (contracts/public-cases.json, USGS reports)",
       "version": "participant kit 0.5.0",
-      "date": "2026-10-26",
-      "role": "development and checking: 12 reports were hand-labelled by the team (evidence pages per criterion) to test retrieval and the criterion rules; the case fields of all 99 cases were used to write and check the TRL rules",
+      "date": "2026-11-14",
+      "role": "development and checking: 12 reports were hand-labelled by the team (evidence pages per criterion) to test retrieval, the criterion rules and the quotes; the case fields, the organizer's estimated TRLs and the report texts of all 99 public cases were used to write and check the TRL rules (70 open reports for development, 29 kept sealed as a final check)",
       "label_origin": "organizer's estimated TRL per report; not expert labels. The per-criterion evidence pages are the team's own labels.",
       "linked_project": "none",
       "license": "U.S. public domain (USGS); some figures third-party, see the manifest's licence_note"
@@ -30,5 +30,5 @@
       "catalogue models listed in submission.json models[]: ms-marco-minilm-l6-v2, deberta-v3-base-zeroshot-v2.0-c"
     ]
   },
-  "notes": "No model was trained or fine-tuned. The module uses only the common base environment and two catalogue models from the organizer's model store."
+  "notes": "No model was trained or fine-tuned. The module uses only the common base environment and two catalogue models from the organizer's model store. A trained TRL model was tested during development and not shipped."
 }
